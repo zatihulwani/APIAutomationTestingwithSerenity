@@ -38,10 +38,10 @@ Feature: Register
 
   @positive
   Scenario: Register using google account
-    When user click register with google
-    Then user should be redirected to google page
+    When user click register with "google"
+    Then user should be redirected to "google" page
 
   @positive
     Scenario: Register using facebook account
-      When user click register with facebook
-      Then user should be redirected to facebook page
+    When user click register with "facebook"
+    Then user should be redirected to "facebook" page

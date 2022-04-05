@@ -35,23 +35,14 @@ public class RegisterStepsDefinition {
         System.out.println("see warning message");
     }
 
-    @When("user click register with google")
-    public void userClickRegisterWithGoogle() {
-        System.out.println("click register with google");
+    @When("user click register with {string}")
+    public void userClickRegisterWithGoogle(String partner) {
+        System.out.println("Ini partner : " + partner);
     }
 
-    @Then("user should be redirected to google page")
-    public void userShouldBeRedirectedToGooglePage() {
-        System.out.println("redirect ke homepage");
+    @Then("user should be redirected to {string} page")
+    public void userShouldBeRedirectedToGooglePage(String partner) {
+        System.out.println("Redirect ke partner : " + partner);
     }
 
-    @When("user click register with facebook")
-    public void userClickRegisterWithFacebook() {
-        System.out.println("click register with facebook");
-    }
-
-    @Then("user should be redirected to facebook page")
-    public void userShouldBeRedirectedToFacebookPage() {
-        System.out.println("redirect ke homepage");
-    }
 }
