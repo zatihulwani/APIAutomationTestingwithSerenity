@@ -27,6 +27,11 @@ public class ReqresinStepDef {
         reqresinAPI.getListUser();
     }
 
+    @And("user send POST Register request to reqresin")
+    public void postRegister() {
+        reqresinAPI.postRegister();
+    }
+
 
     @Then("response status code should be {int}")
     public void statusCodeValidation(int statusCode) {
