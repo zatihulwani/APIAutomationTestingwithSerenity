@@ -32,6 +32,11 @@ public class ReqresinStepDef {
         reqresinAPI.postRegister();
     }
 
+    @And("user send POST unsuccess login request to reqresin")
+    public void postunsuccesslogin() {
+        reqresinAPI.postUnsuccessLogin();
+    }
+
 
     @Then("response status code should be {int}")
     public void statusCodeValidation(int statusCode) {

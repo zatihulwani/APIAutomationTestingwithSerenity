@@ -59,4 +59,15 @@ public class ReqresinAPI {
                 .body(bodyJSON.toString())
                 .post(REQRESIN_BASEURL + "/api/register");
     }
+
+    public void postUnsuccessLogin() {
+        JSONObject bodyJSON = new JSONObject();
+        bodyJSON.put("email", "peter@klaven");
+
+
+        SerenityRest.given()
+                .header("Content-type", "application/json")
+                .body(bodyJSON.toString())
+                .post(REQRESIN_BASEURL + "/api/login");
+    }
 }
