@@ -2,8 +2,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>net.serenitybdd.starter</groupId>
-    <artifactId>serenity-rest-starter</artifactId>
+    <groupId>net.serenitybdd.api.service.starter</groupId>
+    <artifactId>serenity-rest-api.service.starter</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -66,6 +66,7 @@
             <scope>test</scope>
         </dependency>
 
+
         <!-- libraries used directly from serenity-core-->
         <dependency>
             <groupId>io.rest-assured</groupId>
@@ -101,6 +102,8 @@
             <version>4.13.1</version>
             <scope>test</scope>
         </dependency>
+
+
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
@@ -112,6 +115,17 @@
             <artifactId>hamcrest</artifactId>
             <version>2.2</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20220320</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>5.0.0</version>
         </dependency>
     </dependencies>
     <build>

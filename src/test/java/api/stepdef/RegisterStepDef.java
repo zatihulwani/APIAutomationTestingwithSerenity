@@ -1,13 +1,19 @@
-package starter.postcodes;
+package api.stepdef;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class RegisterStepsDefinition {
+public class RegisterStepDef {
+    @Given("user is on registration page")
+    public void userIsOnRegistrationPage() {
+        System.out.println("User berada di halaman register");
+    }
+
     @And("user input email data")
     public void userInputEmailData() {
-        System.out.println("input email");
+        System.out.println("Input email");
     }
 
     @And("user input password data")
@@ -36,13 +42,12 @@ public class RegisterStepsDefinition {
     }
 
     @When("user click register with {string}")
-    public void userClickRegisterWithGoogle(String partner) {
-        System.out.println("Ini partner : " + partner);
+    public void userClickRegisterWith(String partner) {
+        System.out.println("Ini partner:" + partner);
     }
 
     @Then("user should be redirected to {string} page")
-    public void userShouldBeRedirectedToGooglePage(String partner) {
-        System.out.println("Redirect ke partner : " + partner);
+    public void userShouldBeRedirectedToPage(String partner) {
+        System.out.println("Redirect ke partner: " + partner);
     }
-
 }
