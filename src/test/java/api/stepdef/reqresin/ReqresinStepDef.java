@@ -12,9 +12,9 @@ public class ReqresinStepDef {
 
     ReqresinAPI reqresinAPI = new ReqresinAPI();
 
-    @And("user send PUT Update request to reqresin")
-    public void putUpdate() {
-        reqresinAPI.putUpdate();
+    @And("user send GET Users request to reqresin")
+    public void getUsers() {
+        reqresinAPI.getListUser();
     }
 
     @And("user send POST login request to reqresin")
@@ -22,22 +22,39 @@ public class ReqresinStepDef {
         reqresinAPI.postLogin();
     }
 
-    @And("user send GET Users request to reqresin")
-    public void getUsers() {
-        reqresinAPI.getListUser();
-    }
-
     @And("user send POST Register request to reqresin")
     public void postRegister() {
         reqresinAPI.postRegister();
     }
 
+    @And("user send PUT Update request to reqresin")
+    public void putUpdate() {
+        reqresinAPI.putUpdate();
+    }
+
     @And("user send POST unsuccess login request to reqresin")
-    public void postunsuccesslogin() {
+    public void postUnsuccesslogin() {
         reqresinAPI.postUnsuccessLogin();
     }
 
+    @And("user send POST unsuccess Register request to reqresin")
+    public void postUnsuccessRegister() {
+        reqresinAPI.postUnsuccessRegister();
+    }
 
+    @And("user send GET single user request to reqresin")
+    public void getUserNotFound() {
+        reqresinAPI.getUserNotFound();
+    }
+
+    @And("user send DELETE user request to reqresin")
+    public void deleteUser() {
+        reqresinAPI.deleteUser();
+    }
+
+
+
+    //validation
     @Then("response status code should be {int}")
     public void statusCodeValidation(int statusCode) {
         restAssuredThat(response -> response.statusCode(statusCode));

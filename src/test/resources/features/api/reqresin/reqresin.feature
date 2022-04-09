@@ -32,3 +32,20 @@ Feature: Reqresin
     When user send POST unsuccess login request to reqresin
     Then response status code should be 400
     And response structure should match json schema "unsuccess-login.json"
+
+  @negative
+  Scenario: Unsuccessful POST Register
+    When user send POST unsuccess Register request to reqresin
+    Then response status code should be 400
+    And response structure should match json schema "unsuccess-regist.json"
+
+  @negative
+  Scenario: Unsuccessful GET Single User
+    When user send GET single user request to reqresin
+    Then response status code should be 404
+    And response structure should match json schema "single-user-notfound.json"
+
+  @negative
+  Scenario: DELETE User
+    When user send DELETE user request to reqresin
+    Then response status code should be 204
